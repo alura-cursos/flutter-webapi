@@ -7,7 +7,6 @@ import 'models/contact.dart';
 
 void main() {
   runApp(BytebankApp());
-  save(Transaction(200.0, Contact(0, 'Gui', 2000))).then((transaction) => print(transaction));
 }
 
 class BytebankApp extends StatelessWidget {
