@@ -35,7 +35,7 @@ Future<List<Transaction>> findAll() async {
   final Response response =
       await client.get(baseUrl).timeout(Duration(seconds: 5));
   final List<dynamic> decodedJson = jsonDecode(response.body);
-  final List<Transaction> transactions = List();
+  final List<Transaction> transactions = [];
   for (Map<String, dynamic> transactionJson in decodedJson) {
     final Map<String, dynamic> contactJson = transactionJson['contact'];
     final Transaction transaction = Transaction(
